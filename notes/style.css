@@ -1,3 +1,82 @@
-h1 {
-    color: tomato;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 1.5rem;
+    font-family: sans-serif;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.textarea {
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #000;
+    font: inherit;
+    resize: none;
+}
+
+.note {
+    background: #eceff1;
+    padding: 1.5rem;
+    height: 16rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.note .text {
+    overflow: hidden;
+    flex: 1;
+}
+
+.note:hover .actions {
+    display: flex;
+}
+
+.actions {
+    display: none;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background: #fff;
+    color: #000;
+    border: 0;
+    cursor: pointer;
+}
+
+.action svg {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.action:hover {
+    background: #000;
+    color: #fff;
 }
