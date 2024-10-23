@@ -167,7 +167,7 @@
         while (element && element !== notesElement) {
             if (element.classList.contains('js-action')) {
                 const action = element.getAttribute('data-action');
-                
+
                 if (action === 'delete') {
                     const noteElement = element.closest('.js-note');
                     const id = Number(noteElement.getAttribute('data-id'));
